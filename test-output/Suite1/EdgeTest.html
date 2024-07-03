@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  test</title>
+<title>TestNG:  EdgeTest</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>test</h2><table border='1' align="center">
+<h2 align='center'>EdgeTest</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 03 20:26:00 EEST 2024</td>
+<td>Started on:</td><td>Wed Jul 03 20:02:11 EEST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>30 seconds (30912 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39848 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -79,8 +79,12 @@ function toggleAllBoxes() {
 <td><div><pre>java.lang.AssertionError: expected [Thank you for your message. It has been sent.] but found [One or more fields have an error. Please check and try again.]
 	at tests.ContactFormTest.sendInvalidMessage(ContactFormTest.java:49)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1859142611", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1859142611'><pre>java.lang.AssertionError: expected [Thank you for your message. It has been sent.] but found [One or more fields have an error. Please check and try again.]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace81808319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace81808319'><pre>java.lang.AssertionError: expected [Thank you for your message. It has been sent.] but found [One or more fields have an error. Please check and try again.]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
@@ -104,21 +108,16 @@ function toggleAllBoxes() {
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
 </pre></div></td>
-<td>9</td>
-<td>tests.ContactFormTest@27462a88</td></tr>
+<td>11</td>
+<td>tests.ContactFormTest@130c12b7</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -130,8 +129,8 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.ContactFormTest.sendValidMessage()'><b>sendValidMessage</b><br>Test class: tests.ContactFormTest</td>
 <td></td>
-<td>11</td>
-<td>tests.ContactFormTest@27462a88</td></tr>
+<td>14</td>
+<td>tests.ContactFormTest@130c12b7</td></tr>
 </table><p>
 </body>
 </html>
