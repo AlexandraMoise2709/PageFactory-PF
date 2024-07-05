@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite1" class="navigator-link">
-              <span class="suite-name border-failed">Suite1</span>
+              <span class="suite-name border-passed">Suite1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite1" class="hide-methods failed suite-Suite1"> (hide)</a> <!-- hide-methods failed suite-Suite1 -->
-                      <a href="#" panel-name="suite-Suite1" class="show-methods failed suite-Suite1"> (show)</a> <!-- show-methods failed suite-Suite1 -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite1">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="tests.ContactFormTest" class="method navigator-link" hash-for-method="sendInvalidMessage">sendInvalidMessage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite1 -->
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite1">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite1" title="tests.ContactFormTest" class="method navigator-link" hash-for-method="sendValidMessage">sendValidMessage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite1" title="tests.HomeWorkSearch" class="method navigator-link" hash-for-method="searchWhileLogged">searchWhileLogged</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite1 -->
@@ -133,37 +119,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite1" class="panel Suite1">
-          <div class="suite-Suite1-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.ContactFormTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="sendInvalidMessage">
-                  </a> <!-- sendInvalidMessage -->
-                  <span class="method-name">sendInvalidMessage</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Thank you for your message. It has been sent.] but found [One or more fields have an error. Please check and try again.]
-	at tests.ContactFormTest.sendInvalidMessage(ContactFormTest.java:49)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite1-class-failed -->
           <div class="suite-Suite1-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.ContactFormTest</span>
+              <span class="class-name">tests.HomeWorkSearch</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sendValidMessage">
-                  </a> <!-- sendValidMessage -->
-                  <span class="method-name">sendValidMessage</span>
+                  <a name="searchWhileLogged">
+                  </a> <!-- searchWhileLogged -->
+                  <span class="method-name">searchWhileLogged</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,7 +151,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tests.ContactFormTest&quot;/&gt;
+      &lt;class name=&quot;tests.HomeWorkSearch&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- test --&gt;
 &lt;/suite&gt; &lt;!-- Suite1 --&gt;
@@ -225,20 +191,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sendValidMessage')
-data.setCell(0, 2, 'tests.ContactFormTest')
-data.setCell(0, 3, 11860);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'sendInvalidMessage')
-data.setCell(1, 2, 'tests.ContactFormTest')
-data.setCell(1, 3, 9186);
+data.setCell(0, 1, 'searchWhileLogged')
+data.setCell(0, 2, 'tests.HomeWorkSearch')
+data.setCell(0, 3, 105660);
 window.suiteTableData['Suite1']= { tableData: data, tableDiv: 'times-div-Suite1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite1">
               </div> <!-- times-div-Suite1 -->
             </div> <!-- times-div -->
@@ -264,32 +226,22 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.ContactFormTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.HomeWorkSearch</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup(https://keyfood.ro, Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">sendValidMessage</span>
-                <span class="method-start">4378 ms</span>
+                <span class="method-name">searchWhileLogged</span>
+                <span class="method-start">4811 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">recordFailure([TestResult name=sendValidMessage status=SUCCESS method=ContactFormTest.sendValidMessage()[pri:1, in...)</span>
-                <span class="method-start">16246 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">sendInvalidMessage</span>
-                <span class="method-start">16251 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">recordFailure([TestResult name=sendInvalidMessage status=FAILURE method=ContactFormTest.sendInvalidMessage()[pri:2...)</span>
-                <span class="method-start">25445 ms</span>
+                <span class="method-name">recordFailure([TestResult name=searchWhileLogged status=SUCCESS method=HomeWorkSearch.searchWhileLogged()[pri:1, i...)</span>
+                <span class="method-start">110474 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25746 ms</span>
+                <span class="method-start">110476 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

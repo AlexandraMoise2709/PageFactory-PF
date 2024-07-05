@@ -32,10 +32,24 @@ public class SearchPage extends SeleniumWrappers{
 	@FindBy(css="[class='quantity-button plus']")
 	public WebElement plusBtn;
 	
-	@FindBy(xpath="(//span[@class='woocommerce-Price-amount amount'])[5]")
+	@FindBy(xpath="(//span[@class='woocommerce-Price-amount amount'])[4]")
 	public WebElement pricePerItem;
 	
 	@FindBy(xpath="(//span[@class='woocommerce-Price-amount amount'])[7]")
 	public WebElement totalPrice;
+	
+	@FindBy(xpath="(//a[contains(@href, 'checkout-2')])[4]")
+	public WebElement chechoutBtn;
+	
+	@FindBy(id="terms")
+	public WebElement checkbox;
+	
+	@FindBy(id="place_order")
+	public WebElement placeOrder;
+	
+	//
+
+	@FindBy(css = "[class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received']")
+	public WebElement successOrder;
 	
 }

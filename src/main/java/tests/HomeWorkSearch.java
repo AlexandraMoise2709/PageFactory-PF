@@ -2,6 +2,7 @@ package tests;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -21,7 +22,7 @@ public class HomeWorkSearch extends BaseTest {
 	String PASS = PropertiesFileProcessor.readPropertiesFile("pass", "credentials.properties");
 
 	@Test(priority=1)
-	public void searchWhileLogged() {		
+	public void searchWhileLogged() throws InterruptedException {		
 		MenuPage menu =  new MenuPage(driver);
 		MyAccountPage myAccount =  new MyAccountPage(driver);
 		SearchPage search =  new SearchPage(driver);
@@ -35,15 +36,26 @@ public class HomeWorkSearch extends BaseTest {
 		action.sendKeys(Keys.ENTER).perform();
 		search.click(search.addToCart);
 		
-		String expectedMessage = "View cart\n" +
-                "\"Rold Gold Tiny Twists Pretzels\" has been added to your cart.";
+		String expectedMessage = "“Rold Gold Tiny Twists Pretzels” has been added to your cart.";
                 	
-		//assertEquals(search.getElementText(search.succesMsg),expectedMessage);
-		
+		String actualMessage = search.succesMsg.getText();
+				 
+		assertTrue(actualMessage.contains(expectedMessage));
 		search.click(search.viewBTN);
 		search.click(search.plusBtn);
 		
+		//System.out.println(search.pricePerItem.getText());
+		//System.out.println(search.totalPrice.getText());
 		assertNotEquals(search.pricePerItem,search.totalPrice);
+		search.click(search.chechoutBtn);
+		search.click(search.checkbox);
+		search.click(search.placeOrder);
+		
+		Thread.sleep(5000);
+		String orderMessExpect = "Thank you. Your order has been received.";
+    	
+		String orderMessActual = search.successOrder.getText();
+		assertTrue(orderMessExpect.contains(orderMessActual));
 	
 }
 	
