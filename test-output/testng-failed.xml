@@ -8,14 +8,15 @@
   </listeners>
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="tests.HomeWorkSearch">
+      <class name="tests.Tema29">
         <methods>
-          <include name="searchWhileLogged"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="addProducts" invocation-numbers="3"/>
           <include name="recordFailure"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- tests.HomeWorkSearch -->
+      </class> <!-- tests.Tema29 -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

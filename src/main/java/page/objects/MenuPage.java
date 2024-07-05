@@ -1,10 +1,15 @@
 package page.objects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import selenium.utils.SeleniumWrappers;
 
@@ -24,5 +29,46 @@ public class MenuPage extends SeleniumWrappers{
 	@FindBy(linkText = "CONTACT")
 	 public WebElement contactPageLink;
 	
+	////span[@class='text' and text()='ALL CATEGORIES']
 	
+	@FindBy(xpath = "//span[@class='text' and text()='ALL CATEGORIES']")
+	 public WebElement categories;
+	
+		
+	@FindBy(xpath = "(//span[@class='tinvwl_add_to_wishlist-text'])[2]")
+	 public WebElement addToWisList;
+	
+	@FindBy(css = "a[href='https://keyfood.ro/wishlist/']")
+	 public WebElement checkWishlist;
+	
+	//<a href="https://keyfood.ro/wishlist/">Wishlist</a>
+	
+	public By pickCategory(String foodCategory) {
+		
+		 return By.xpath("(//a[@href='https://keyfood.ro/product-category/"+ foodCategory + "/'])[2]");		
+		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
+	}
+	
+	public By pickProduct(String productType) {
+		
+		 return By.xpath("(//a[@href='https://keyfood.ro/product/"+ productType + "/'])[2]");		
+		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
+	}
+	
+
+	
+	public void clickBy(By locator) {
+		
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+			WebElement element  =  driver.findElement(locator);
+			element.click();	
+			
+		}catch(NoSuchElementException e) {
+			
+		}		
+
+	
+		}
 }

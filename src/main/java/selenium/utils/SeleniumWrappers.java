@@ -43,6 +43,8 @@ public class SeleniumWrappers extends BaseTest{
 	}
 	
 	
+	
+	
 	public void sendKeys(WebElement element, String text) {
 		Log.info("called method <sendKeys()> on element " + element);
 		try {

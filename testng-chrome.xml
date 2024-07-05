@@ -9,7 +9,7 @@
    
     <test name="test" >
         <classes>
-            <class name="tests.HomeWorkSearch" ></class>  
+            <class name="tests.Tema29" ></class>  
         </classes>
     </test>   
 </suite>
