@@ -1,13 +1,17 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import framework.utils.PropertiesFileProcessor;
 import page.objects.MenuPage;
 import page.objects.MyAccountPage;
@@ -56,7 +60,7 @@ public class Tema29 extends BaseTest {
 	         return data;
 		
 }
-		@Test(dataProvider =  "createSearchCat")
+		@Test(dataProvider =  "createSearchCat", priority=1)
 		public void addProducts(String categ, String product) throws InterruptedException {
 			
 			menu.click(menu.categories);
@@ -71,7 +75,29 @@ public class Tema29 extends BaseTest {
 			driver.navigate().back();
 	        menu.click(menu.categories);
 		}
-		menu.click(menu.checkWishlist);
+		
+			
+		}
+		
+		@Test(priority=2)
+		public void checkWishlist() {
+			
+			menu.click(menu.checkWishlist);
+
+			String[] products = {"fresh-produce-melons-each", "zevia-kidz-strawberry-lemonade-zero-calorie-soda", "vital-farms-pasture-raised-egg-bites-bacon-cheddar", "shimmer-pastel-almond-blend"}; 		
+			
+		      for(String product : products) { 
+		    	  
+		    	WebElement produs =  menu.productName(product);
+		    	  Assert.assertTrue(produs.isDisplayed());
+	  
+
+		
+		   
+
+
+		          }
+
 			
 		}
 			

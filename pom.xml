@@ -34,6 +34,11 @@
     <groupId>org.apache.logging.log4j</groupId>
     <artifactId>log4j-api</artifactId>
     <version>2.23.1</version>
-</dependency>	  
-  </dependencies>
+</dependency>
+    	<dependency>
+    		<groupId>MavenProject</groupId>
+    		<artifactId>MavenProject</artifactId>
+    		<version>0.0.1-SNAPSHOT</version>
+    	</dependency>
+    </dependencies>
 </project>

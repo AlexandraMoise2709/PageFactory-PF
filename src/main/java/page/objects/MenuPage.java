@@ -41,6 +41,11 @@ public class MenuPage extends SeleniumWrappers{
 	@FindBy(css = "a[href='https://keyfood.ro/wishlist/']")
 	 public WebElement checkWishlist;
 	
+    public WebElement productName(String product) {
+        return driver.findElement(By.xpath("//a[contains(@href, '" + product + "')]"));
+    }
+
+		
 	//<a href="https://keyfood.ro/wishlist/">Wishlist</a>
 	
 	public By pickCategory(String foodCategory) {
@@ -55,7 +60,12 @@ public class MenuPage extends SeleniumWrappers{
 		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
 	}
 	
-
+	public By composeProductName(String product) {
+		
+		 return By.xpath("(//a[contains(@href, '"+product+"')]");		
+		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
+	}
+	
 	
 	public void clickBy(By locator) {
 		

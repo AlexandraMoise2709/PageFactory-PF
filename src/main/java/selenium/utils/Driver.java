@@ -52,8 +52,8 @@ public class Driver {
 	
 	public static ChromeOptions getChromeOptions() {
 		ChromeOptions option =  new ChromeOptions();
-		option.addArguments("--window-size=1800,1200");
-		option.addArguments("--headless");	
+		//option.addArguments("--window-size=1800,1200");
+		//option.addArguments("--headless");	
 		return option;	
 	}
 	

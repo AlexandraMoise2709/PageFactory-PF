@@ -52,4 +52,6 @@ public class SearchPage extends SeleniumWrappers{
 	@FindBy(css = "[class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received']")
 	public WebElement successOrder;
 	
+
+	
 }
