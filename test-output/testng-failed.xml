@@ -11,10 +11,8 @@
       <class name="tests.Tema29">
         <methods>
           <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="addProducts" invocation-numbers="0 2 3"/>
           <include name="recordFailure"/>
-          <include name="checkWishlist"/>
+          <include name="checkElementsInList"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- tests.Tema29 -->

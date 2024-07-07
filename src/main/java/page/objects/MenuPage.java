@@ -49,26 +49,37 @@ public class MenuPage extends SeleniumWrappers{
 	@FindBy(name = "tinvwl-add-to-cart")
 	 public WebElement addToCart;
 	
-	@FindBy(xpath = "(//input[@type=\"checkbox\"])[1]")
+	@FindBy(xpath = "(//input[@type='checkbox'])[1]")
 	public WebElement checkItems;
 	
 	@FindBy(id ="tinvwl_product_actions")
 	public WebElement dropDown;
 
-	@FindBy(xpath = "(//button[@type='submit'])[5])")
+	@FindBy(xpath = "(//button[@type='submit'])[5]")
 	public WebElement applyAction;
- 	
+	
+	//class="woocommerce-error"
+	
+	@FindBy(className = "woocommerce-error")
+	public WebElement errorMsg;
+	
 	public By pickCategory(String foodCategory) {
 		
-		 return By.xpath("(//a[@href='https://keyfood.ro/product-category/"+ foodCategory + "/'])[2]");		
+
+		return By.xpath("(//a[@href='https://keyfood.ro/product-category/"+ foodCategory + "/'])[2]");		
 		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
 	}
 	
 	public By pickProduct(String productType) {
-		
-		 return By.xpath("(//a[@href='https://keyfood.ro/product/"+ productType + "/'])[2]");		
-		 				  //(//a[@href='https://keyfood.ro/product-category/fruits-vegetables/'])[2]
-	}
+		if(productType=="fresh-produce-melons-each" || productType=="shimmer-pastel-almond-blend" )
+		{ return By.xpath("(//a[@href='https://keyfood.ro/product/"+ productType + "/'])[3]");		
+			}
+		else if(productType=="vital-farms-pasture-raised-egg-bites-bacon-cheddar") {
+				return By.xpath("(//a[@href='https://keyfood.ro/product/"+ productType + "/'])[4]");
+		}	else {
+			return By.xpath("//a[@href='https://keyfood.ro/product/"+ productType + "/']");
+		}			  
+	} 
 	
 	public By composeProductName(String product) {
 		

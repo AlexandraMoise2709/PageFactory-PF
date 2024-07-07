@@ -1,14 +1,14 @@
 package tests;
 
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 
+
+import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -70,7 +70,11 @@ public class Tema29 extends BaseTest {
 		try {	
 			menu.clickBy(menu.pickCategory(categ));
 			menu.clickBy(menu.pickProduct(product));
+			
+			
 			menu.click(menu.addToWisList);
+			
+			Thread.sleep(3000);
 			driver.navigate().back();
 	        menu.click(menu.categories);
 		} catch(NoSuchElementException e) {
@@ -79,27 +83,47 @@ public class Tema29 extends BaseTest {
 	        menu.click(menu.categories);
 		}
 		
+		
 			
 		}
 		
+		
 		@Test(priority=2)
+		public void checkElementsInList() {
+			menu.click(menu.checkWishlist);
+			List<WebElement> wishlistItems = driver.findElements(By.cssSelector("[class=wishlist_item]"));
+	                
+	                String[] expectedProductNames = {
+	                        "Shimmer Pastel Almond Blend",
+	                        "Vital Farms Pasture-Raised Egg Bites Bacon & Cheddar",
+	                        "Fresh Produce Melons Each",
+	                        "Zevia Kidz Strawberry Lemonade Zero Calorie Soda"
+	                    };
+	                
+	                for (int i = 0; i < wishlistItems.size(); i++) {
+	                    WebElement item = wishlistItems.get(i);
+	                    
+	                    WebElement productNameElement = item.findElement(By.cssSelector("[class='product-name'] a"));
+		                String productName = productNameElement.getText();
+		                
+		                WebElement productActionElement = item.findElement(By.cssSelector("[class='product-action'] button"));
+		                String buttonName = productActionElement.getText();
+		                
+		                String expectedAction = "Add to Cart";
+		
+		                
+		                Assert.assertEquals(productName, expectedProductNames[i]);
+		                
+		                Assert.assertEquals(buttonName,expectedAction); 
+		            
+	                }
+			}
+
+		
+		@Test(priority=3)
 		public void checkWishlist() throws InterruptedException {
 			
-			menu.click(menu.checkWishlist);
-
-			String[] products = {"fresh-produce-melons-each", "zevia-kidz-strawberry-lemonade-zero-calorie-soda", "vital-farms-pasture-raised-egg-bites-bacon-cheddar", "shimmer-pastel-almond-blend"}; 		
 			
-		      for(String product : products) { 
-		    	  
-		    	WebElement produs =  menu.productName(product);
-		    	WebElement addToCart =  menu.addToCart;
-		    	System.out.println(menu.productName(product));
-		    	  Assert.assertTrue(produs.isDisplayed());
-		    	  Assert.assertTrue(addToCart.isDisplayed());
-
-
-		          }
-		      
 		      menu.click(menu.checkItems);
 		      Actions action = new Actions(driver);
 				action.moveToElement(menu.dropDown)
@@ -109,13 +133,12 @@ public class Tema29 extends BaseTest {
 				.perform();
 				action.moveToElement(menu.applyAction)
 				.click()			
-				.perform();
+				.perform();			
 				
-				Thread.sleep(10000);
 				
-				//assertEquals("","BLABA");
+			assertEquals(menu.errorMsg.getText(),
+			"Product “Zevia Kidz Strawberry Lemonade Zero Calorie Soda” could not be added to cart because some requirements are not met.");
 
-			
 		}
 			
 		
