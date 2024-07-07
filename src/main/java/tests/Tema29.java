@@ -6,7 +6,10 @@ import static org.testng.Assert.assertTrue;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -80,7 +83,7 @@ public class Tema29 extends BaseTest {
 		}
 		
 		@Test(priority=2)
-		public void checkWishlist() {
+		public void checkWishlist() throws InterruptedException {
 			
 			menu.click(menu.checkWishlist);
 
@@ -89,14 +92,28 @@ public class Tema29 extends BaseTest {
 		      for(String product : products) { 
 		    	  
 		    	WebElement produs =  menu.productName(product);
+		    	WebElement addToCart =  menu.addToCart;
+		    	System.out.println(menu.productName(product));
 		    	  Assert.assertTrue(produs.isDisplayed());
-	  
-
-		
-		   
+		    	  Assert.assertTrue(addToCart.isDisplayed());
 
 
 		          }
+		      
+		      menu.click(menu.checkItems);
+		      Actions action = new Actions(driver);
+				action.moveToElement(menu.dropDown)
+				.click()
+				.keyDown(Keys.ARROW_DOWN)
+				.keyDown(Keys.ENTER)
+				.perform();
+				action.moveToElement(menu.applyAction)
+				.click()			
+				.perform();
+				
+				Thread.sleep(10000);
+				
+				//assertEquals("","BLABA");
 
 			
 		}

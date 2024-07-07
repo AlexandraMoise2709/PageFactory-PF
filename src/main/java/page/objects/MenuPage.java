@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import selenium.utils.SeleniumWrappers;
@@ -44,10 +45,19 @@ public class MenuPage extends SeleniumWrappers{
     public WebElement productName(String product) {
         return driver.findElement(By.xpath("//a[contains(@href, '" + product + "')]"));
     }
-
-		
-	//<a href="https://keyfood.ro/wishlist/">Wishlist</a>
 	
+	@FindBy(name = "tinvwl-add-to-cart")
+	 public WebElement addToCart;
+	
+	@FindBy(xpath = "(//input[@type=\"checkbox\"])[1]")
+	public WebElement checkItems;
+	
+	@FindBy(id ="tinvwl_product_actions")
+	public WebElement dropDown;
+
+	@FindBy(xpath = "(//button[@type='submit'])[5])")
+	public WebElement applyAction;
+ 	
 	public By pickCategory(String foodCategory) {
 		
 		 return By.xpath("(//a[@href='https://keyfood.ro/product-category/"+ foodCategory + "/'])[2]");		
