@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import page.objects.BlogPage;
@@ -31,10 +31,13 @@ public class Tema30 extends BaseTest {
 			 Thread.sleep(2000);
 			 
 			 BlogPage bpage = new BlogPage(driver);
-			 bpage.commentSection.sendKeys("hey");
+			 bpage.addComment("Hello world", "Alexandra", "a@gmail.com");
 	
 			 
-			 
+			 Assert.assertTrue(bpage.commentPosted.isDisplayed());
+			 Thread.sleep(3000);
+			 driver.navigate().back();
+			 driver.navigate().back();
 			 
 		 }
 	

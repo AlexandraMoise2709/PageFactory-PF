@@ -3,6 +3,7 @@ package page.objects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import selenium.utils.SeleniumWrappers;
 
@@ -10,10 +11,11 @@ public class BlogPage extends SeleniumWrappers {
 
 	public BlogPage(WebDriver driver) {
 		super(driver);
+		PageFactory.initElements(driver, this);
 		
 	}
-	@FindBy(css="[class='comment-form-comment']")
-	public WebElement commentSection;
+	 @FindBy(css="[class='comment-form-comment']>textarea")
+     public WebElement commentSection;
 	
 	@FindBy(id="author")
 	public WebElement authorSection;
@@ -22,24 +24,29 @@ public class BlogPage extends SeleniumWrappers {
 	@FindBy(id ="email")
 	public WebElement emailSection;
 	
-	@FindBy(id ="wp-comment-cookies-consent")
+	@FindBy(css = "[class='comment-form-cookies-consent']>label")
 	public WebElement consentCheckBox;
 	
-	@FindBy(id ="submit")
+	
+	
+	@FindBy(css = "[class='form-submit']>input")
 	public WebElement submitComment;
 
 	
-	public void sendMessage(String name, String author, String email) {
+	@FindBy(xpath = "//a[contains(text(),'Alexandra')]")
+	public WebElement commentPosted;
+	
+
+	
+	public void addComment(String comment, String author, String email) {
 		
-		sendKeys(commentSection, name);
-		sendKeys(authorSection, author );
+		sendKeys(commentSection, comment);
+		sendKeys(authorSection, author);
 		sendKeys(emailSection, email);
 		click(consentCheckBox);
 		click(submitComment);
 		
-		
 	}
-	
 
 
 }
