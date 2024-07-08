@@ -9,7 +9,7 @@
    
     <test name="test" >
         <classes>
-            <class name="tests.Tema29" ></class>  
+            <class name="tests.Tema30" ></class>  
         </classes>
     </test>   
 </suite>

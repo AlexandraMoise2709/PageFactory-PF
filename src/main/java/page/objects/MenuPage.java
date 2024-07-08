@@ -30,6 +30,9 @@ public class MenuPage extends SeleniumWrappers{
 	@FindBy(linkText = "CONTACT")
 	 public WebElement contactPageLink;
 	
+	@FindBy(linkText = "BLOG")
+	 public WebElement blogPageLink;
+	
 	////span[@class='text' and text()='ALL CATEGORIES']
 	
 	@FindBy(xpath = "//span[@class='text' and text()='ALL CATEGORIES']")

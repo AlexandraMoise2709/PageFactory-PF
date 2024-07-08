@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-07T19:52:19 EEST" name="Suite1" finished-at="2024-07-07T19:52:58 EEST" duration-ms="39736">
+  <suite started-at="2024-07-08T09:48:31 EEST" name="Suite1" finished-at="2024-07-08T09:48:37 EEST" duration-ms="6021">
     <groups>
     </groups>
-    <test started-at="2024-07-07T19:52:19 EEST" name="test" finished-at="2024-07-07T19:52:58 EEST" duration-ms="39736">
-      <class name="tests.Tema29">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:19 EEST" name="setup" finished-at="2024-07-07T19:52:21 EEST" duration-ms="2586" status="PASS">
+    <test started-at="2024-07-08T09:48:31 EEST" name="test" finished-at="2024-07-08T09:48:37 EEST" duration-ms="6021">
+      <class name="tests.Tema30">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:tests.Tema30@26e356f0]" started-at="2024-07-08T09:48:31 EEST" name="setup" finished-at="2024-07-08T09:48:34 EEST" duration-ms="2499" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,132 +23,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:21 EEST" name="setUp" finished-at="2024-07-07T19:52:34 EEST" duration-ms="13017" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:34 EEST" name="addProducts" data-provider="createSearchCat" finished-at="2024-07-07T19:52:40 EEST" duration-ms="5755" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[fruits-vegetables]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[fresh-produce-melons-each]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProducts -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:40 EEST" name="recordFailure" finished-at="2024-07-07T19:52:40 EEST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addProducts status=SUCCESS method=Tema29.addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method signature="addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:40 EEST" name="addProducts" data-provider="createSearchCat" finished-at="2024-07-07T19:52:45 EEST" duration-ms="5349" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[beverages]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[zevia-kidz-strawberry-lemonade-zero-calorie-soda]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProducts -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:45 EEST" name="recordFailure" finished-at="2024-07-07T19:52:45 EEST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addProducts status=SUCCESS method=Tema29.addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method signature="addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:45 EEST" name="addProducts" data-provider="createSearchCat" finished-at="2024-07-07T19:52:50 EEST" duration-ms="5083" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[breakfast-dairy]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[vital-farms-pasture-raised-egg-bites-bacon-cheddar]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProducts -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:50 EEST" name="recordFailure" finished-at="2024-07-07T19:52:50 EEST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addProducts status=SUCCESS method=Tema29.addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method signature="addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:50 EEST" name="addProducts" data-provider="createSearchCat" finished-at="2024-07-07T19:52:56 EEST" duration-ms="5350" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[biscuits-snacks]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[shimmer-pastel-almond-blend]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProducts -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:56 EEST" name="recordFailure" finished-at="2024-07-07T19:52:56 EEST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=addProducts status=SUCCESS method=Tema29.addProducts(java.lang.String,java.lang.String)[pri:1, instance:tests.Tema29@5824a83d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method signature="checkElementsInList()[pri:2, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:56 EEST" name="checkElementsInList" finished-at="2024-07-07T19:52:57 EEST" duration-ms="922" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="verifyBlog()[pri:0, instance:tests.Tema30@26e356f0]" started-at="2024-07-08T09:48:34 EEST" name="verifyBlog" finished-at="2024-07-08T09:48:37 EEST" duration-ms="3308" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[expected [Buy product] but found [Add to Cart]]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "bpage.commentSection" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Buy product] but found [Add to Cart]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at tests.Tema29.checkElementsInList(Tema29.java:117)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because "bpage.commentSection" is null
+at tests.Tema30.verifyBlog(Tema30.java:34)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -179,37 +61,22 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkElementsInList -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:57 EEST" name="recordFailure" finished-at="2024-07-07T19:52:57 EEST" duration-ms="183" status="PASS">
+        </test-method> <!-- verifyBlog -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema30@26e356f0]" started-at="2024-07-08T09:48:37 EEST" name="recordFailure" finished-at="2024-07-08T09:48:37 EEST" duration-ms="182" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=checkElementsInList status=FAILURE method=Tema29.checkElementsInList()[pri:2, instance:tests.Tema29@5824a83d] output={null}]]]>
+                <![CDATA[[TestResult name=verifyBlog status=FAILURE method=Tema30.verifyBlog()[pri:0, instance:tests.Tema30@26e356f0] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method signature="checkWishlist()[pri:3, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:57 EEST" name="checkWishlist" finished-at="2024-07-07T19:52:58 EEST" duration-ms="1444" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkWishlist -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Tema29@5824a83d]" started-at="2024-07-07T19:52:58 EEST" name="recordFailure" finished-at="2024-07-07T19:52:58 EEST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=checkWishlist status=SUCCESS method=Tema29.checkWishlist()[pri:3, instance:tests.Tema29@5824a83d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-      </class> <!-- tests.Tema29 -->
+      </class> <!-- tests.Tema30 -->
     </test> <!-- test -->
   </suite> <!-- Suite1 -->
 </testng-results>

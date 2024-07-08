@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Jul 07 19:52:19 EEST 2024</td>
+<td>Started on:</td><td>Mon Jul 08 09:48:31 EEST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39736 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6021 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,13 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.Tema29.checkElementsInList()'><b>checkElementsInList</b><br>Test class: tests.Tema29</td>
-<td><div><pre>java.lang.AssertionError: expected [Buy product] but found [Add to Cart]
-	at tests.Tema29.checkElementsInList(Tema29.java:117)
+<td title='tests.Tema30.verifyBlog()'><b>verifyBlog</b><br>Test class: tests.Tema30</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])&quot; because &quot;bpage.commentSection&quot; is null
+	at tests.Tema30.verifyBlog(Tema30.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1679401185", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1679401185'><pre>java.lang.AssertionError: expected [Buy product] but found [Add to Cart]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:629)
-	at org.testng.Assert.assertEquals(Assert.java:639)
-	at tests.Tema29.checkElementsInList(Tema29.java:117)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1066656936", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1066656936'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])&quot; because &quot;bpage.commentSection&quot; is null
+	at tests.Tema30.verifyBlog(Tema30.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,41 +111,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>0</td>
-<td>tests.Tema29@5824a83d</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='tests.Tema29.addProducts()'><b>addProducts</b><br>Test class: tests.Tema29<br>Parameters: beverages, zevia-kidz-strawberry-lemonade-zero-calorie-soda</td>
-<td></td>
-<td>5</td>
-<td>tests.Tema29@5824a83d</td></tr>
-<tr>
-<td title='tests.Tema29.addProducts()'><b>addProducts</b><br>Test class: tests.Tema29<br>Parameters: fruits-vegetables, fresh-produce-melons-each</td>
-<td></td>
-<td>5</td>
-<td>tests.Tema29@5824a83d</td></tr>
-<tr>
-<td title='tests.Tema29.addProducts()'><b>addProducts</b><br>Test class: tests.Tema29<br>Parameters: breakfast-dairy, vital-farms-pasture-raised-egg-bites-bacon-cheddar</td>
-<td></td>
-<td>5</td>
-<td>tests.Tema29@5824a83d</td></tr>
-<tr>
-<td title='tests.Tema29.addProducts()'><b>addProducts</b><br>Test class: tests.Tema29<br>Parameters: biscuits-snacks, shimmer-pastel-almond-blend</td>
-<td></td>
-<td>5</td>
-<td>tests.Tema29@5824a83d</td></tr>
-<tr>
-<td title='tests.Tema29.checkWishlist()'><b>checkWishlist</b><br>Test class: tests.Tema29</td>
-<td></td>
-<td>1</td>
-<td>tests.Tema29@5824a83d</td></tr>
+<td>3</td>
+<td>tests.Tema30@26e356f0</td></tr>
 </table><p>
 </body>
 </html>

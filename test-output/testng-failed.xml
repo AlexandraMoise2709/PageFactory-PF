@@ -8,14 +8,13 @@
   </listeners>
   <test thread-count="5" name="test(failed)">
     <classes>
-      <class name="tests.Tema29">
+      <class name="tests.Tema30">
         <methods>
           <include name="setup"/>
           <include name="recordFailure"/>
-          <include name="checkElementsInList"/>
-          <include name="setUp"/>
+          <include name="verifyBlog"/>
         </methods>
-      </class> <!-- tests.Tema29 -->
+      </class> <!-- tests.Tema30 -->
     </classes>
   </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
